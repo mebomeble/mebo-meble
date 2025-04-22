@@ -33,23 +33,9 @@
       margin: 0 auto;
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
       padding: 20px;
       max-width: 1200px;
       margin: 0 auto;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .gallery img:hover {
-      transform: scale(1.03);
     }
     footer {
       text-align: center;
@@ -73,22 +59,17 @@
       Działamy na terenie Wrocławia, Trzebnicy, Oleśnicy i okolic.
     </p>
   </section>
-  <section class="gallery" id="insta-gallery">
-    <!-- Zdjęcia z Instagrama będą ładowane tutaj -->
+  <section class="gallery">
+    
+<!-- LightWidget WIDGET -->
+<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+<iframe src="//lightwidget.com/widgets/c61480c04e8c5beeb0d5d077fed472b9.html" 
+scrolling="no" allowtransparency="true" class="lightwidget-widget" 
+style="width:100%;border:0;overflow:hidden;"></iframe>
+
   </section>
   <footer>
     &copy; 2025 Mebo Meble. Wszystkie prawa zastrzeżone.
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/instafeed.js@2.0.0/dist/instafeed.min.js"></script>
-  <script>
-    const feed = new Instafeed({
-      accessToken: "IGQVJ...", // Tu dodamy token później
-      limit: 12,
-      template: '<img src="{image}" alt="{caption}" />',
-      target: "insta-gallery"
-    });
-    feed.run();
-  </script>
 </body>
 </html>
